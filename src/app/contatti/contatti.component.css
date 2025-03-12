@@ -1,0 +1,17 @@
+.contatti {
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+  }
+  form div {
+    margin-bottom: 1rem;
+  }
+  .error {
+    color: red;
+    font-size: 0.9rem;
+  }
+  .info-addizionali {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
