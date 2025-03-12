@@ -1,36 +1,14 @@
-<section class="contatti">
-    <h1>Contattaci</h1>
-    <form [formGroup]="contattoForm" (ngSubmit)="onSubmit()">
-      <div>
-        <label for="nome">Nome:</label>
-        <input id="nome" formControlName="nome" type="text" placeholder="Il tuo nome">
-        <div *ngIf="contattoForm.get('nome')?.invalid && contattoForm.get('nome')?.touched" class="error">
-          Il nome è obbligatorio.
-        </div>
-      </div>
-      <div>
-        <label for="email">Email:</label>
-        <input id="email" formControlName="email" type="email" placeholder="La tua email">
-        <div *ngIf="contattoForm.get('email')?.invalid && contattoForm.get('email')?.touched" class="error">
-          Inserisci una email valida.
-        </div>
-      </div>
-      <div>
-        <label for="oggetto">Oggetto:</label>
-        <input id="oggetto" formControlName="oggetto" type="text" placeholder="Oggetto del messaggio">
-      </div>
-      <div>
-        <label for="messaggio">Messaggio:</label>
-        <textarea id="messaggio" formControlName="messaggio" rows="5" placeholder="Scrivi il tuo messaggio"></textarea>
-      </div>
-      <button type="submit" [disabled]="contattoForm.invalid">Invia</button>
-    </form>
-  
-    <div class="info-addizionali">
-      <h2>Dove Siamo</h2>
-      <p>Via Roma, 123 - 00100 Roma</p>
-      <p>Tel: 06 1234567</p>
-      <!-- Puoi inserire qui un componente mappa o un iframe Google Maps -->
-    </div>
-  </section>
-  
+<div class="contatti-container">
+  <div class="contatti-content">
+    <h1>Chi Siamo</h1>
+    <p>
+      Siamo un'azienda leader nel settore, con anni di esperienza e un team di esperti dedicati a fornire soluzioni innovative.
+    </p>
+    <p>
+      La nostra missione è creare valore per i nostri clienti, puntando all'eccellenza e all'innovazione in ogni progetto.
+    </p>
+    <p>
+      Unisciti a noi per scoprire come possiamo aiutarti a raggiungere i tuoi obiettivi.
+    </p>
+  </div>
+</div>

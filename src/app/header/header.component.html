@@ -1,15 +1,16 @@
-<header>
+<header class="site-header">
+  <div class="container">
     <div class="logo">
-      <img src="assets/logo.png" alt="Logo Aziendale">
+      <img src="/src/assets/images/log.jpg">
     </div>
-    <nav>
-      <ul>
-        <li><a routerLink="/home">Home</a></li>
-        <li><a routerLink="/chi-siamo">Chi Siamo</a></li>
-        <li><a routerLink="/contatti">Contatti</a></li>
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li class="nav-item"><a routerLink="/home">Home</a></li>
+        <li class="nav-item"><a routerLink="/contatti">Chi siamo</a></li>
       </ul>
     </nav>
     <div class="cta">
-      <button (click)="goToPreventivo()">Richiedi Preventivo</button>
+      <a class="btn btn-primary" routerLink="/preventivo">Richiedi Preventivo</a>
     </div>
-  </header>
+  </div>
+</header>

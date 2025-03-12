@@ -1,0 +1,8 @@
+:host {
+    display: block;
+  }
+body {
+  background-color: #f0f0f056; /* Scegli il colore che preferisci */
+  margin: 0;
+  padding: 0;
+}

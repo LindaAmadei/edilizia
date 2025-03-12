@@ -1,0 +1,34 @@
+<div class="preventivi">
+  <h2>Richiedi Preventivo</h2>
+  <form [formGroup]="preventivoForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Nome e Cognome:</label>
+      <input id="nome" type="text" formControlName="nome" placeholder="Inserisci il tuo nome e cognome">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email" placeholder="Inserisci la tua email">
+    </div>
+    <div class="form-group">
+      <label for="telefono">Telefono:</label>
+      <input id="telefono" type="text" formControlName="telefono" placeholder="Inserisci il tuo numero di telefono">
+    </div>
+    <div class="form-group">
+      <label for="budget">Budget (facoltativo):</label>
+      <input id="budget" type="text" formControlName="budget" placeholder="Inserisci il budget se conosciuto">
+    </div>
+    <div class="form-group">
+      <label for="messaggio">Messaggio:</label>
+      <textarea id="messaggio" formControlName="messaggio" placeholder="Descrivi il progetto o le tue esigenze"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="images">Carica foto (JPG, PNG):</label>
+      <input id="images" type="file" (change)="onFileChangeImages($event)" multiple accept="image/*">
+    </div>
+    <div class="form-group">
+      <label for="docs">Carica documenti PDF:</label>
+      <input id="docs" type="file" (change)="onFileChangeDocs($event)" multiple accept="application/pdf">
+    </div>
+    <button type="submit" [disabled]="preventivoForm.invalid">Invia Richiesta</button>
+  </form>
+</div>

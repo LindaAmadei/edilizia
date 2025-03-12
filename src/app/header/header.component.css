@@ -1,16 +1,75 @@
-header {
+.site-header {
+  background: linear-gradient(135deg, #333, #333);
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #f8f8f8;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+
+  .logo img {
+    max-height: 50px;
   }
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
+
+  .navigation {
+    flex: 1;
+    margin-left: 40px;
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+
+      .nav-item a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+      }
+
+      .nav-item a:hover {
+        color: #ffd600;
+      }
+    }
   }
+
+  .cta {
+    .btn {
+      background-color: #ffd600;
+      color: #0d47a1;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #ffea00;
+      }
+    }
+  }
+}
+
+/* Responsive design per dispositivi mobili */
+@media (max-width: 768px) {
+  .site-header {
+    .container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .navigation {
+      margin: 20px 0;
+    }
+  }
+}
